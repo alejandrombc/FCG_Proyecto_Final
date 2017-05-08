@@ -13,7 +13,7 @@
 
 # Enunciado
 
-El enunciado de la tarea se encuentra en el pdf **_Enunciado.pdf_**. Se empleo la tecnica de Ray Tracing.
+El enunciado de la tarea se encuentra en el pdf **_Enunciado.pdf_**. Se empleo la tecnica de Ray Tracing en GPU.
 
 # Mundo
 
