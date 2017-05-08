@@ -1,0 +1,25 @@
+﻿  Main.cpp
+c:\users\alejandro\documents\fundamentos y tecnicas en computacion grafica\proyecto final\proyecto\proyecto final - 24206267\proyecto final - 24206267\GLSLProgram.h(4): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+c:\users\alejandro\documents\fundamentos y tecnicas en computacion grafica\proyecto final\proyecto\proyecto final - 24206267\proyecto final - 24206267\Mesh.h(84): warning C4244: 'argument': conversion from 'float' to 'GLint', possible loss of data
+c:\users\alejandro\documents\fundamentos y tecnicas en computacion grafica\proyecto final\proyecto\proyecto final - 24206267\proyecto final - 24206267\Mesh.h(85): warning C4244: 'argument': conversion from 'float' to 'GLint', possible loss of data
+Main.cpp(17): warning C4305: 'initializing': truncation from 'double' to 'float'
+Main.cpp(93): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Main.cpp(94): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Main.cpp(113): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Main.cpp(114): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Main.cpp(140): warning C4305: '+=': truncation from 'double' to 'float'
+Main.cpp(142): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+Main.cpp(431): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
+libSOIL.lib(SOIL.obj) : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:ICF' specification
+LINK : warning LNK4098: defaultlib 'MSVCRTD' conflicts with use of other libs; use /NODEFAULTLIB:library
+  Generating code
+  1 of 1074 functions ( 0.1%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    23 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+libSOIL.lib(image_DXT.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libSOIL.lib(image_DXT.obj)' or at 'C:\Users\Alejandro\Documents\Fundamentos y Tecnicas en Computacion Grafica\Proyecto Final\Proyecto\Proyecto Final - 24206267\Release\vc120.pdb'; linking object as if no debug info
+libSOIL.lib(image_helper.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libSOIL.lib(image_helper.obj)' or at 'C:\Users\Alejandro\Documents\Fundamentos y Tecnicas en Computacion Grafica\Proyecto Final\Proyecto\Proyecto Final - 24206267\Release\vc120.pdb'; linking object as if no debug info
+libSOIL.lib(SOIL.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libSOIL.lib(SOIL.obj)' or at 'C:\Users\Alejandro\Documents\Fundamentos y Tecnicas en Computacion Grafica\Proyecto Final\Proyecto\Proyecto Final - 24206267\Release\vc120.pdb'; linking object as if no debug info
+libSOIL.lib(stb_image_aug.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libSOIL.lib(stb_image_aug.obj)' or at 'C:\Users\Alejandro\Documents\Fundamentos y Tecnicas en Computacion Grafica\Proyecto Final\Proyecto\Proyecto Final - 24206267\Release\vc120.pdb'; linking object as if no debug info
+  Proyecto Final - 24206267.vcxproj -> C:\Users\Alejandro\Documents\Fundamentos y Tecnicas en Computacion Grafica\Proyecto Final\Proyecto\Proyecto Final - 24206267\Release\Proyecto Final - 24206267.exe
+  Proyecto Final - 24206267.vcxproj -> C:\Users\Alejandro\Documents\Fundamentos y Tecnicas en Computacion Grafica\Proyecto Final\Proyecto\Proyecto Final - 24206267\Release\Proyecto Final - 24206267.pdb (Full PDB)
