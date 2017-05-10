@@ -446,23 +446,6 @@ vec4 reflection(vec3 origin, vec3 norm, DirLight dirLight, vec3 dir){
     float min_t = 1000000.0;
     for(int rebotes = 0; rebotes < 1; rebotes++){
        
-        // //For de los triangulos piramide
-        for(int i = 2; i < 8; i++){
-            t = triangle_intersection(triangles[i], r, hitpos);
-            if(t >= 0.0 && t < min_t){
-                min_t = t;
-                vec3 normal_triangulo = calculoNormalPiramide(i-1);
-                color = vec4(phong(dirLight, normal_triangulo, hitpos, triangles[i].color, r, false), 1.0);
-                //Lanzo los rayos de sombra desde el punto de choque a los objetos de la escena
-                vec3 shadow_dir = normalize(dirLight.direction - hitpos); 
-                Ray shadow; shadow.origin = hitpos; shadow.direction = shadow_dir;
-                vec3 sha_color = shadowRay(shadow, i+5);
-                if(sha_color.x > 0.0){
-                    color = vec4(sha_color, 1.0);
-                }
-            }
-        }
-
         for(int i=1; i<3; i++) {
             t = interesect_ray_sphere(r,spheres[i],hitpos,normal); //Reviso si hay chooque
             if(t != 0.0) {
@@ -484,6 +467,24 @@ vec4 reflection(vec3 origin, vec3 norm, DirLight dirLight, vec3 dir){
                     }
                 }
             }
+
+        // //For de los triangulos piramide
+        for(int i = 2; i < 8; i++){
+            t = triangle_intersection(triangles[i], r, hitpos);
+            if(t >= 0.0 && t < min_t){
+                min_t = t;
+                vec3 normal_triangulo = calculoNormalPiramide(i-1);
+                color = vec4(phong(dirLight, normal_triangulo, hitpos, triangles[i].color, r, false), 1.0);
+                //Lanzo los rayos de sombra desde el punto de choque a los objetos de la escena
+                vec3 shadow_dir = normalize(dirLight.direction - hitpos); 
+                Ray shadow; shadow.origin = hitpos; shadow.direction = shadow_dir;
+                vec3 sha_color = shadowRay(shadow, i+5);
+                if(sha_color.x > 0.0){
+                    color = vec4(sha_color, 1.0);
+                }
+            }
+        }
+
 
          //Rayo-caja
         t = interesect_ray_caja(cubos, r, hitpos);
@@ -538,24 +539,6 @@ vec4 reflection_rebote(vec3 origin, vec3 norm, DirLight dirLight, vec3 dir){
     float min_t = 1000000.0;
     for(int rebotes = 0; rebotes < 1; rebotes++){
 
-
-
-        //For de los triangulos piramide
-        for(int i = 2; i < 8; i++){
-            t = triangle_intersection(triangles[i], r, hitpos);
-            if(t >= 0.0 && t < min_t){
-                min_t = t;
-                vec3 normal_triangulo = calculoNormalPiramide(i-1);
-                color = vec4(phong(dirLight, normal_triangulo, hitpos, triangles[i].color, r, false), 1.0);
-                //Lanzo los rayos de sombra desde el punto de choque a los objetos de la escena
-                vec3 shadow_dir = normalize(dirLight.direction - hitpos); 
-                Ray shadow; shadow.origin = hitpos; shadow.direction = shadow_dir;
-                vec3 sha_color = shadowRay(shadow, i+5);
-                if(sha_color.x > 0.0){
-                    color = vec4(sha_color, 1.0);
-                }
-            }
-        }
         
         for(int i=1; i<3; i++) {
             t = interesect_ray_sphere(r,spheres[i],hitpos,normal); //Reviso si hay chooque
@@ -574,6 +557,24 @@ vec4 reflection_rebote(vec3 origin, vec3 norm, DirLight dirLight, vec3 dir){
                     if(sha_color.x > 0.0){
                         color = vec4(sha_color,1.0);
                     }
+                }
+            }
+        }
+
+        
+        //For de los triangulos piramide
+        for(int i = 2; i < 8; i++){
+            t = triangle_intersection(triangles[i], r, hitpos);
+            if(t >= 0.0 && t < min_t){
+                min_t = t;
+                vec3 normal_triangulo = calculoNormalPiramide(i-1);
+                color = vec4(phong(dirLight, normal_triangulo, hitpos, triangles[i].color, r, false), 1.0);
+                //Lanzo los rayos de sombra desde el punto de choque a los objetos de la escena
+                vec3 shadow_dir = normalize(dirLight.direction - hitpos); 
+                Ray shadow; shadow.origin = hitpos; shadow.direction = shadow_dir;
+                vec3 sha_color = shadowRay(shadow, i+5);
+                if(sha_color.x > 0.0){
+                    color = vec4(sha_color, 1.0);
                 }
             }
         }
